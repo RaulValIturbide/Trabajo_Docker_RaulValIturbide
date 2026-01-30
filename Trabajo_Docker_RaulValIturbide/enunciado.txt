@@ -1,0 +1,5 @@
+¡Hola! soy tu jefe. Mira, necesito que hagas una aplicación de tareas (To-Do List) usando Docker Compose. Nada complicado, ya tienes el código, solo tienes que levantar unos contenedores usando: un frontend en Nginx que sirva HTML, CSS y JavaScript; un backend en Node.js que exponga una API REST para gestionar las tareas; y una base de datos PostgreSQL para guardar todo. 
+
+Los tres servicios corren en contenedores separados, cada uno en su propio puerto. El frontend accede al backend a través de HTTP, el backend se conecta a la BD usando variables de entorno que sacas de un archivo .env (que no subes a Git, claro). Usa un volumen para que los datos de PostgreSQL persistan, un bind mount para el frontend para que puedas desarrollar sin reconstruir, y una red personalizada para que backend y BD se comuniquen de forma segura.
+
+Cuando termines, debe funcionar con docker compose up -d --build, los datos deben guardarse en la BBDD, y tienes que documentar todo en un README explicando cómo funciona, qué hace cada servicio y cómo configurar el .env. Ah, y el código tiene que estar limpio, comentado, y la interfaz tiene que verse bien. ¿Preguntas? ¡Estupendo!

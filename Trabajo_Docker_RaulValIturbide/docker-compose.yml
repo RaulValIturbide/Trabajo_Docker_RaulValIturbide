@@ -1,0 +1,44 @@
+services:
+    database:
+        image: postgres:16-alpine
+        container_name: contenedor_database
+        env_file: .env
+        environment:
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD} 
+            - POSTGRES_DB=${POSTGRES_DB}
+        volumes:
+            - postgres-data:/var/lib/postgresql/data
+        networks:
+            - red_interna
+    backend:
+        build: ./backend
+        container_name: contenedor_backend
+        env_file: .env
+        environment:
+            - DB_HOST=${DB_HOST}
+            - DB_PORT=${DB_PORT}
+            - POSTGRES_USER=${POSTGRES_USER}
+            - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+            - POSTGRES_DB=${POSTGRES_DB}
+            - BACKEND_PORT=${BACKEND_PORT}
+        ports:
+            - "${BACKEND_PORT}:${BACKEND_PORT}"
+        depends_on:
+            - database
+        networks:
+            - red_interna
+    frontend:
+        image: nginx:alpine
+        container_name: contenedor_frontend
+        volumes:
+            - ./frontend:/usr/share/nginx/html:ro
+        ports:
+            - "8080:80"
+        networks:
+            - default
+volumes:
+    postgres-data:
+networks:
+    red_interna:
+        driver: bridge

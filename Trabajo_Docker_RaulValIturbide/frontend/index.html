@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestor de Tareas - Docker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>📝 Gestor de Tareas</h1>
+      <p class="subtitle">Sistema con Docker Compose + PostgreSQL</p>
+    </header>
+
+    <div class="add-task">
+      <form id="taskForm">
+        <input 
+          type="text" 
+          id="taskInput" 
+          placeholder="Nueva tarea..." 
+          required 
+          autocomplete="off"
+        />
+        <button type="submit">➕ Añadir</button>
+      </form>
+    </div>
+
+    <div class="tasks-container">
+      <h2>Tareas pendientes</h2>
+      <ul id="tasksList" class="tasks-list"></ul>
+      
+      <div id="emptyState" class="empty-state" style="display: none;">
+        <p>🎉 ¡No hay tareas pendientes!</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
