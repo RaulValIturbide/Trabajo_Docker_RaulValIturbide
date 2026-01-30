@@ -48,10 +48,10 @@ Usamos un volúmen **bind mount** "./frontend:/usr/share/nginx/html:ro"
 
 # TABLA DE PUERTOS EXPUESTOS
 
-  **SERVICIO**    **PUERTO INTERNO**    **PUERTO EXTERNO**    **DESCRIPCIÓN**
-  Database               5432                  n/a              No expuesto al host
-  Backend                4000                  4000             API REST
-  Frontend                80                   8080             Página Web
+  **SERVICIO** | **PUERTO INTERNO**  |  **PUERTO EXTERNO**  |  **DESCRIPCIÓN**
+  Database     |         5432        |         n/a          |   No expuesto al host
+  Backend      |         4000        |         4000         |   API REST
+  Frontend     |         80          |          8080        |   Página Web
 
 
 # CONFIGURACIÓN DEL ARCHIVO .ENV
