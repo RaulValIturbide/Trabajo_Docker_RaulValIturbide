@@ -58,4 +58,9 @@ Usamos un volúmen **bind mount** "./frontend:/usr/share/nginx/html:ro"
 # CONFIGURACIÓN DEL ARCHIVO .ENV
 Se debe crear un archivo en la raiz del proyecto con este contenido:
 
-  POSTGRES_USER=todouserPOSTGRES_PASSWORD=todopassPOSTGRES_DB=tododbDB_HOST=databaseDB_PORT=5432BACKEND_PORT=4000
+  -POSTGRES_USER=todouser
+  -POSTGRES_PASSWORD=todopass
+  -POSTGRES_DB=tododb
+  -DB_HOST=database
+  -DB_PORT=5432
+  -BACKEND_PORT=4000
