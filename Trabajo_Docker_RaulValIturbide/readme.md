@@ -1,17 +1,17 @@
 # Estructura del Proyecto
 ## En la carpeta raiz se debe encontrar:
-  ### Carpeta backend
+  #### Carpeta backend
     Dockerfile
     package.json
     server.js
-  ### Carpeta fronend
+  #### Carpeta fronend
     app.js
     index.html
     style.css
-  ### .env
-  ### docker-compose.yml
-  ### enunciado.txt
-  ### readme.md
+  #### .env
+  #### docker-compose.yml
+  #### enunciado.txt
+  #### readme.md
 
   # SERVICIOS
 El proyecto está compuesto por 3 servicios, estos son: **database** **backend** y **frontend**
